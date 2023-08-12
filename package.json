@@ -1,0 +1,26 @@
+{
+  "name": "bidding-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:backend": "cd biding-backend && npm install",
+    "install:frontend": "cd biding && npm install",
+    "install:all'": "npm install && npm run install:backend && npm run install:frontend",
+    "start:backend": "cd biding-backend && npm start",
+    "start:frontend": "cd biding && npm start",
+    "db-migration": "cd biding-backend && npx prisma migrate dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nest": "^0.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
